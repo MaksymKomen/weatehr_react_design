@@ -1,0 +1,15 @@
+// @use '../../styles/variables.scss';
+@use '../../styles/variables';
+
+// Main parent class. Feel free to adjust this as you see fit.
+.app-container {
+  position: relative;
+  max-width: 150rem;
+  justify-content: center;
+  margin: 0 auto;
+
+  @media screen and (min-width: variables.$screen-md-min) {
+    width: variables.$screen-md-min;
+  }
+
+}

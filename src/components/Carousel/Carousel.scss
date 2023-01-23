@@ -1,0 +1,116 @@
+@use "../../styles/variables";
+
+
+.next-prev{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 72px;
+}
+.carousel-caption {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #404040;
+  margin-bottom: 10px;
+}
+
+.carousel-current {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.dot {
+  list-style-type: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.carousel-content {
+  position: relative;
+  img {
+    width: 100%;
+  }
+  .blur-area {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    padding-left: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 35px;
+    background-color:rgba(48, 48, 48, 0.53);
+    backdrop-filter: blur(5px);
+    height: 105px;
+
+    .content {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      color: white;
+      .temperature {
+        font-size: 80px;
+        line-height: 80px;
+        margin-right: 16px;
+      }
+      .description {
+        font-size: 16px;
+        font-weight: 600;
+        padding-bottom: 5px;
+      }
+    }
+    .radar {
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
+      padding-bottom: 12px;
+      @media screen and (max-width: variables.$screen-md-min) {
+        position: absolute;
+        top: -200%;
+        right: 20px;
+        height: auto;
+      }
+      .local {
+        text-align: center;
+        background-color: white;
+        color: #d82121;
+        width: 126px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 20px;
+        padding: 4px 15px;
+        &:hover {
+          background-color: #d82121;
+          color: #ffffff !important;
+        }
+      }
+      
+      .trash {
+        background-color: #ffffff;
+        width: 32px;
+        border-radius: 16px;
+        padding: 5px;
+        margin-left: 16px;
+        &:hover {
+          background-color: #d82121;
+        }
+      }
+      
+      p {
+        font-size: 16px;
+        color: #d82121;
+        font-weight: 600;
+      }
+    }
+  }
+}

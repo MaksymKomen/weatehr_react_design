@@ -1,0 +1,47 @@
+
+@use '../../styles/variables.scss';
+
+.header {
+  padding: 8px 28px;
+  @media screen and (max-width: variables.$screen-md-min) {
+    padding: 8px 16px;
+  }
+  display: flex;
+  justify-content: space-between;
+  .logo-container {
+    display: flex;
+    line-height: 32px;
+    color: #D82121;
+    font-weight: bold;
+    width: 93px;
+    div {
+      padding-left: 5px;
+    }
+  }
+
+  .type-container {
+    display: flex;
+    button {
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      height: 32px;
+      border: none;
+      border-radius: 5px;
+      width: 44px;
+      @media screen and (max-width: variables.$screen-md-min) {
+        width: 32px;
+      }
+    }
+    .active {
+      color: #ffffff;
+      background-color: #D82121;
+    }
+    .deactive {
+      color: #000000;
+      background-color: #f2f2f2;
+    }
+  }
+}
+
+
